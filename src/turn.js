@@ -30,4 +30,32 @@ export default class Turn {
     }
     return winner
   }
+
+  pileCards() {
+    let turn = this
+    if (turn.turnType() == 'basic') {
+      turn.cardPile.push(turn.player1.deck.cards[0])
+      turn.cardPile.push(turn.player2.deck.cards[0])
+      turn.player1.deck.removeCard()
+      turn.player2.deck.removeCard()
+    } else if (turn.turnType() == 'war') {
+      [0,1,2].forEach(function(i) {
+        if (turn.player1.deck.cards[i]) {
+          turn.cardPile.push(turn.player1.deck.cards[i])
+        }
+        if (turn.player1.deck.cards[i]) {
+          turn.cardPile.push(turn.player2.deck.cards[i])
+        }
+      });
+      [0,1,2].forEach(function(i) {
+        turn.player1.deck.removeCard()
+        turn.player2.deck.removeCard()
+      });
+    } else if (turn.turnType() == 'MAD') {
+      [0,1,2].forEach(function(i) {
+        turn.player1.deck.removeCard()
+        turn.player2.deck.removeCard()
+      });
+    }
+  }
 }
