@@ -1,10 +1,11 @@
 import Card from '../src/card.js'
+import Deck from '../src/deck.js'
 
 export default class DeckGenerator {
   constructor() {
     this.shuffledDeck = this.shuffledDeck()
-    this.deck1 = this.shuffledDeck[0]
-    this.deck2 = this.shuffledDeck[1]
+    this.deck1 = new Deck(this.shuffledDeck[0])
+    this.deck2 = new Deck(this.shuffledDeck[1])
   }
 
   shuffledDeck() {

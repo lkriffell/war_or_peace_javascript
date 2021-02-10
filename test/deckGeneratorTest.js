@@ -1,4 +1,5 @@
 import DeckGenerator from '../src/deckGenerator.js'
+import Deck from '../src/deck.js'
 import assert from 'assert'
 
 describe('DeckGenerator', function() {
@@ -9,7 +10,9 @@ describe('DeckGenerator', function() {
   });
 
   it('holds a shuffled deck split in half', function() {
-    assert.equal(deckGen.deck1.length, 26)
-    assert.equal(deckGen.deck2.length, 26)
+    assert.equal(deckGen.deck1.cards.length, 26)
+    assert.equal(deckGen.deck2.cards.length, 26)
+    assert(deckGen.deck1 instanceof Deck)
+    assert(deckGen.deck2 instanceof Deck)
   });
 });
