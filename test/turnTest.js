@@ -4,7 +4,7 @@ import Player from '../src/player.js'
 import Turn from '../src/turn.js'
 import assert from 'assert'
 
-describe('Payer', function() {
+describe('Turn', function() {
   var cardOne = new Card('Hearts', 'King', 13)
   var cardTwo = new Card('Diamonds', '7', 7)
   var cardThree = new Card('Spades', '9', 9)
