@@ -91,5 +91,16 @@ describe('Payer', function() {
         assert.equal(turn.cardPile.length, 0)
       });
     });
+    describe('awardSpoils()', function() {
+      it('awardSpoils', function() {
+        turn.player1.deck.cards = [cardOne, cardTwo, cardThree]
+        turn.player2.deck.cards = [cardFour, cardFive, cardSix]
+        turn.cardPile = []
+        let winner = turn.winner()
+        turn.pileCards()
+        turn.awardSpoils(winner)
+        assert.equal(player1.deck.cards.length, 4)
+      });
+    });
   });
 });
