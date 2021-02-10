@@ -24,7 +24,9 @@ describe('Deck', function() {
 
   describe('class methods', function() {
     it('rankOfCardAt', function() { 
-      assert(deck.rankOfCardAt, 'Hearts')
+      assert.equal(deck.rankOfCardAt(0), 13)
+      assert.equal(deck.rankOfCardAt(1), 7)
+      assert.equal(deck.rankOfCardAt(2), 9)
     });
   });
 });
