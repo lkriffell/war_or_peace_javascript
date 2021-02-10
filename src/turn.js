@@ -14,4 +14,20 @@ export default class Turn {
       return 'war'
     }
   }
+
+  winner() {
+    let winner = this.player1
+    if (this.turnType() == 'basic') {
+      if (this.player2.deck.rankOfCardAt(0) > this.player1.deck.rankOfCardAt(0)) {
+        winner = this.player2
+      }
+    } else if (this.turnType() == 'war') {
+      if (this.player2.deck.rankOfCardAt(2) > this.player1.deck.rankOfCardAt(2)) {
+        winner = this.player2
+      }
+    } else if (this.turnType() == 'MAD') {
+      winner = 'No Winner X('
+    }
+    return winner
+  }
 }

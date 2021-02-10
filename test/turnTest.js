@@ -42,5 +42,26 @@ describe('Payer', function() {
         assert.equal(turn.turnType(), 'MAD')
       });
     });
+
+    describe('winner()', function() {
+      it('winner basic', function() { 
+        player2.deck.removeCard()
+        assert.equal(turn.turnType(), 'basic')
+        assert.equal(turn.winner(), player1)
+      });
+      
+      it('winner war', function() { 
+        player2.deck.cards.unshift(cardFive);
+        player1.deck.cards.unshift(cardFive);
+        assert.equal(turn.turnType(), 'war')
+        assert.equal(turn.winner(), player2)
+      });
+      
+      it('winner MAD', function() { 
+        player1.deck.removeCard()
+        assert.equal(turn.turnType(), 'MAD')
+        assert.equal(turn.winner(), 'No Winner X(')
+      });
+    });
   });
 });
