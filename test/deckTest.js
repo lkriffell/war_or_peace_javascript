@@ -34,9 +34,9 @@ describe('Deck', function() {
       assert.equal(deck.highRankingCards().length, 1)
     });
 
-    // it('percentHighRanking', function() { 
-    //   assert.equal(deck.percentHighRanking(), 33)
-    // });
+    it('percentHighRanking', function() { 
+      assert.equal(deck.percentHighRanking(), 33)
+    });
 
     // it('removeCard', function() { 
     //   deck.removeCard()
