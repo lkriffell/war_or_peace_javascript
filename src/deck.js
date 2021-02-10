@@ -6,8 +6,8 @@ export default class Deck {
   rankOfCardAt(index) {
     if (this.cards[index]) {
       return this.cards[index].rank
-    } else if (this.cards.length) {
-      return this.cards[-1].rank
+    } else if (this.cards.length > 1) {
+      return this.cards[this.cards.length - 1].rank
     }
   }
 
