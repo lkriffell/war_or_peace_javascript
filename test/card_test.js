@@ -5,8 +5,8 @@ describe('Card', function() {
   it('can exist', function() { 
     var myCard = new Card('Hearts', 'King', 13)
     assert(myCard instanceof Card)
-    assert(myCard.suit, 'Hearts')
-    assert(myCard.value, 'King')
-    assert(myCard.rank, 13)
+    assert.equal(myCard.suit, 'Hearts')
+    assert.equal(myCard.value, 'King')
+    assert.equal(myCard.rank, 13)
   });
 });

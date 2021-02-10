@@ -14,22 +14,17 @@ describe('Deck', function() {
   });
 
   it('has cards', function() { 
-    assert(deck.cards[0].suit, 'Hearts')
-    assert(deck.cards[0].rank, 'King')
-    assert(deck.cards[0].value, 13)
-    assert(deck.cards[2].suit, 'Spades')
-    assert(deck.cards[2].rank, '9')
-    assert(deck.cards[2].value, 9)
+    assert.equal(deck.cards[0].suit, 'Hearts')
+    assert.equal(deck.cards[0].value, 'King')
+    assert.equal(deck.cards[0].rank, 13)
+    assert.equal(deck.cards[2].suit, 'Spades')
+    assert.equal(deck.cards[2].value, '9')
+    assert.equal(deck.cards[2].rank, 9)
   });
 
   describe('class methods', function() {
-    // it('rankOfCardAt', function() { 
-    //   assert(deck.cards[0].suit, 'Hearts')
-    //   assert(deck.cards[0].rank, 'King')
-    //   assert(deck.cards[0].value, 13)
-    //   assert(deck.cards[2].suit, 'Spades')
-    //   assert(deck.cards[2].rank, '9')
-    //   assert(deck.cards[2].value, 9)
-    // });
+    it('rankOfCardAt', function() { 
+      assert(deck.rankOfCardAt, 'Hearts')
+    });
   });
 });
