@@ -76,8 +76,8 @@ describe('Payer', function() {
         player1.deck.addCard(cardOne)
         player1.deck.addCard(cardTwo)
         player2.deck.addCard(cardFive)
-        turn.cardPile = []
         assert.equal(turn.turnType(), 'war')
+        turn.cardPile = []
         turn.pileCards()
         assert.equal(turn.cardPile.length, 6)
       });
@@ -86,8 +86,9 @@ describe('Payer', function() {
         player1.deck.cards = [cardOne, cardTwo, cardThree]
         player2.deck.cards = [cardFive, cardFour, cardSix]
         assert.equal(turn.turnType(), 'MAD')
+        turn.cardPile = []
         turn.pileCards()
-        assert.equal(turn.cardPile.length, 6)
+        assert.equal(turn.cardPile.length, 0)
       });
     });
   });

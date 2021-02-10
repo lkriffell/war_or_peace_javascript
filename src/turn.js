@@ -58,4 +58,8 @@ export default class Turn {
       });
     }
   }
+
+  // awardSpoils() {
+
+  // }
 }
