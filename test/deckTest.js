@@ -38,10 +38,10 @@ describe('Deck', function() {
       assert.equal(deck.percentHighRanking(), 33)
     });
 
-    // it('removeCard', function() { 
-    //   deck.removeCard()
-    //   assert.equal(deck.cards.length, 2)
-    // });
+    it('removeCard', function() { 
+      deck.removeCard()
+      assert.equal(deck.cards.length, 2)
+    });
 
     // it('addCard', function() { 
     //   deck.addCard(cardOne)
