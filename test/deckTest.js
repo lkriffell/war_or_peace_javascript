@@ -43,10 +43,10 @@ describe('Deck', function() {
       assert.equal(deck.cards.length, 2)
     });
 
-    // it('addCard', function() { 
-    //   deck.addCard(cardOne)
-    //   assert.equal(deck.cards[2], cardOne)
-    //   assert.equal(deck.cards.length, 3)
-    // });
+    it('addCard', function() { 
+      deck.addCard(cardOne)
+      assert.equal(deck.cards[2], cardOne)
+      assert.equal(deck.cards.length, 3)
+    });
   });
 });
