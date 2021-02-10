@@ -1,5 +1,5 @@
-import Card from '../src/card.js'
-import Deck from '../src/deck.js'
+import Card from './card.js'
+import Deck from './deck.js'
 
 export default class DeckGenerator {
   constructor() {
