@@ -28,5 +28,25 @@ describe('Deck', function() {
       assert.equal(deck.rankOfCardAt(1), 7)
       assert.equal(deck.rankOfCardAt(2), 9)
     });
+
+    it('highRankingCards', function() { 
+      assert.equal(deck.highRankingCards()[0], cardOne)
+      assert.equal(deck.highRankingCards().length, 1)
+    });
+
+    // it('percentHighRanking', function() { 
+    //   assert.equal(deck.percentHighRanking(), 33)
+    // });
+
+    // it('removeCard', function() { 
+    //   deck.removeCard()
+    //   assert.equal(deck.cards.length, 2)
+    // });
+
+    // it('addCard', function() { 
+    //   deck.addCard(cardOne)
+    //   assert.equal(deck.cards[2], cardOne)
+    //   assert.equal(deck.cards.length, 3)
+    // });
   });
 });
