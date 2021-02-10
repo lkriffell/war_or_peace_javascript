@@ -4,7 +4,11 @@ export default class Deck {
   }
 
   rankOfCardAt(index) {
-    return this.cards[index].rank
+    if (this.cards[index]) {
+      return this.cards[index].rank
+    } else if (this.cards.length) {
+      return this.cards[-1].rank
+    }
   }
 
   highRankingCards() {
@@ -23,7 +27,9 @@ export default class Deck {
   }
 
   removeCard() {
-    this.cards.shift()
+    if (this.cards.length > 0) {
+      this.cards.shift()
+    }
   }
 
   addCard(card) {
