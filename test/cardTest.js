@@ -1,4 +1,4 @@
-import Card from '../lib/card.js'
+import Card from '../src/card.js'
 import assert from 'assert'
 
 describe('Card', function() {

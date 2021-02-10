@@ -1,5 +1,5 @@
-import Card from '../lib/card.js'
-import Deck from '../lib/deck.js'
+import Card from '../src/card.js'
+import Deck from '../src/deck.js'
 import assert from 'assert'
 
 describe('Deck', function() {
