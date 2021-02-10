@@ -12,7 +12,7 @@ export default class Game {
 
   welcomeMessage() {
     setTimeout(() => {  console.log(`Welcome to War! (or Peace) This game will be played with 52 cards.`); }, 1000);
-    setTimeout(() => {  console.log(`The players today are ${this.player1.name} and ${this.player2.name}, 1,000,000 turns will result in a draw`); }, 4000);
+    setTimeout(() => {  console.log(`The players today are ${this.player1.name} and ${this.player2.name}. 1,000,000 turns will result in a draw`); }, 4000);
     setTimeout(() => {  console.log(`Okay, let's start!`); }, 7000);
   }
 
