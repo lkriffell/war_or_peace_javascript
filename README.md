@@ -1,6 +1,9 @@
 # war_or_peace_javascript
+  - A simulation of the card game War
+  
 ## Implementation
   - `Node v14.15.4`
+  
 ## Testing
   - `Mocha v8.2.1`
   - Run the test suite with `npm test`
