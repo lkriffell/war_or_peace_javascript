@@ -1,0 +1,14 @@
+{
+  "type": "module",
+  "name": "war_or_peace_javascript",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "mocha": "^8.2.1"
+  }
+}
