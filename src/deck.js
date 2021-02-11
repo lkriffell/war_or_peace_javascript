@@ -12,13 +12,9 @@ export default class Deck {
   }
 
   highRankingCards() {
-    let highRank = []
-    this.cards.forEach(card => {
-      if (card.rank > 10) {
-        highRank.push(card)
-      }
-    });
-    return highRank
+    return this.cards.filter(function (card) {
+      return card.rank > 10
+    })
   }
 
   percentHighRanking() {
