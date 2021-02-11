@@ -15,7 +15,7 @@ describe('Payer', function() {
     assert(player instanceof Player)
   });
 
-  describe('class methods', function() {
+  describe('instance methods', function() {
     it('hasLost', function() { 
       assert.equal(player.hasLost(), false)
       player.deck.removeCard()

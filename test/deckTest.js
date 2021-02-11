@@ -22,7 +22,7 @@ describe('Deck', function() {
     assert.equal(deck.cards[2].rank, 9)
   });
 
-  describe('class methods', function() {
+  describe('instance methods', function() {
     it('rankOfCardAt', function() { 
       assert.equal(deck.rankOfCardAt(0), 13)
       assert.equal(deck.rankOfCardAt(1), 7)

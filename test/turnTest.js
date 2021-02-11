@@ -25,7 +25,7 @@ describe('Turn', function() {
     assert.equal(turn.player2.name, "Dre")
   });
 
-  describe('class methods', function() {
+  describe('instance methods', function() {
     describe('turnType()', function() {
       it('turnType basic', function() { 
         assert.equal(turn.turnType(), 'basic')
