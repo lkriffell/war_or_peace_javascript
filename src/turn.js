@@ -60,8 +60,7 @@ export default class Turn {
   }
 
   awardSpoils(winner) {
-    let turn = this
-    turn.cardPile.forEach(function(card) {
+    this.cardPile.forEach(function(card) {
       winner.deck.addCard(card)
     });
   }
