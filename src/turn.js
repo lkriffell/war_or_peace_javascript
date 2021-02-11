@@ -1,8 +1,8 @@
 export default class Turn {
   constructor(player1, player2) {
-    this.player1 = player1;
-    this.player2 = player2;
-    this.cardPile = [];
+    this.player1 = player1
+    this.player2 = player2
+    this.cardPile = []
   }
 
   turnType() {
@@ -62,7 +62,6 @@ export default class Turn {
   }
 
   awardSpoils(winner) {
-
     this.cardPile.forEach(function(card) {
       winner.deck.addCard(card)
     });

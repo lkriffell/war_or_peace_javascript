@@ -8,5 +8,5 @@ describe('Card', function() {
     assert.equal(myCard.suit, 'Hearts')
     assert.equal(myCard.value, 'King')
     assert.equal(myCard.rank, 13)
-  });
-});
+  })
+})

@@ -13,7 +13,7 @@ describe('Payer', function() {
 
   it('can exist', function() { 
     assert(player instanceof Player)
-  });
+  })
 
   describe('instance methods', function() {
     it('hasLost', function() { 
@@ -22,6 +22,6 @@ describe('Payer', function() {
       player.deck.removeCard()
       player.deck.removeCard()
       assert.equal(player.hasLost(), true)
-    });
-  });
-});
+    })
+  })
+})

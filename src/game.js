@@ -4,16 +4,16 @@ import Turn from "./turn.js";
 
 export default class Game {
   constructor(name1, name2) {
-    this.deckGen = new DeckGenerator();
-    this.player1 = new Player(name1, this.deckGen.deck1);
-    this.player2 = new Player(name2, this.deckGen.deck2);
-    this.turnNum = 0;
+    this.deckGen = new DeckGenerator()
+    this.player1 = new Player(name1, this.deckGen.deck1)
+    this.player2 = new Player(name2, this.deckGen.deck2)
+    this.turnNum = 0
   }
 
   welcomeMessage() {
-    setTimeout(() => console.log(`Welcome to War! (or Peace) This game will be played with 52 cards.`), 1000);
-    setTimeout(() => console.log(`The players today are ${this.player1.name} and ${this.player2.name}. 1,000,000 turns will result in a draw`), 4000);
-    setTimeout(() => console.log(`Okay, let's start!`), 7000);
+    setTimeout(() => console.log("Welcome to War! (or Peace) This game will be played with 52 cards."), 1000)
+    setTimeout(() => console.log(`The players today are ${this.player1.name} and ${this.player2.name}. 1,000,000 turns will result in a draw`), 4000)
+    setTimeout(() => console.log("Okay, let's start!"), 7000)
   }
 
   start() {

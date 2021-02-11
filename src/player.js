@@ -1,7 +1,7 @@
 export default class Player {
   constructor(name, deck) {
-    this.name = name;
-    this.deck = deck;
+    this.name = name
+    this.deck = deck
   }
 
   hasLost() {
