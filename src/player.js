@@ -5,10 +5,10 @@ export default class Player {
   }
 
   hasLost() {
-    let lost = false
     if (this.deck.cards.length == 0) {
       return true
+    } else {
+      return false
     }
-    return lost
   }
 }
