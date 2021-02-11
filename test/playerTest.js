@@ -4,12 +4,12 @@ import Player from '../src/player.js'
 import assert from 'assert'
 
 describe('Payer', function() {
-  var cardOne = new Card('Hearts', 'King', 13)
-  var cardTwo = new Card('Diamonds', '7', 7)
-  var cardThree = new Card('Spades', '9', 9)
-  var cards = [cardOne, cardTwo, cardThree]
-  var deck = new Deck(cards)
-  var player = new Player("Barry", deck)
+  const cardOne = new Card('Hearts', 'King', 13)
+  const cardTwo = new Card('Diamonds', '7', 7)
+  const cardThree = new Card('Spades', '9', 9)
+  const cards = [cardOne, cardTwo, cardThree]
+  const deck = new Deck(cards)
+  const player = new Player("Barry", deck)
 
   it('can exist', function() { 
     assert(player instanceof Player)

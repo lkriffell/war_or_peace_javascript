@@ -5,19 +5,19 @@ import Turn from '../src/turn.js'
 import assert from 'assert'
 
 describe('Turn', function() {
-  var cardOne = new Card('Hearts', 'King', 13)
-  var cardTwo = new Card('Diamonds', '7', 7)
-  var cardThree = new Card('Spades', '9', 9)
-  var cardFour = new Card('Hearts', '2', 2)
-  var cardFive = new Card('Diamonds', 'King', 13)
-  var cardSix = new Card('Spades', '9', 9)
-  var cardStackOne = [cardOne, cardTwo, cardThree]
-  var cardStackTwo = [cardFour, cardFive, cardSix]
-  var deckOne = new Deck(cardStackOne)
-  var deckTwo = new Deck(cardStackTwo)
-  var player1 = new Player("Barry", deckOne)
-  var player2 = new Player("Dre", deckTwo)
-  var turn = new Turn(player1, player2)
+  const cardOne = new Card('Hearts', 'King', 13)
+  const cardTwo = new Card('Diamonds', '7', 7)
+  const cardThree = new Card('Spades', '9', 9)
+  const cardFour = new Card('Hearts', '2', 2)
+  const cardFive = new Card('Diamonds', 'King', 13)
+  const cardSix = new Card('Spades', '9', 9)
+  const cardStackOne = [cardOne, cardTwo, cardThree]
+  const cardStackTwo = [cardFour, cardFive, cardSix]
+  const deckOne = new Deck(cardStackOne)
+  const deckTwo = new Deck(cardStackTwo)
+  const player1 = new Player("Barry", deckOne)
+  const player2 = new Player("Dre", deckTwo)
+  const turn = new Turn(player1, player2)
 
   it('can exist', function() { 
     assert(turn instanceof Turn)
