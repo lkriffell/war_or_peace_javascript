@@ -8,7 +8,9 @@ export default class Turn {
   turnType() {
     if (this.player1.deck.rankOfCardAt(0) != this.player2.deck.rankOfCardAt(0)) {
       return 'basic'
-    } else if (this.player1.deck.cards.length > 2 && this.player2.deck.cards.length > 2 && this.player1.deck.rankOfCardAt(0) == this.player2.deck.rankOfCardAt(0) && this.player1.deck.rankOfCardAt(2) == this.player2.deck.rankOfCardAt(2)) {
+    } else if (this.player1.deck.cards.length > 2 && this.player2.deck.cards.length > 2 
+              && this.player1.deck.rankOfCardAt(0) == this.player2.deck.rankOfCardAt(0) 
+              && this.player1.deck.rankOfCardAt(2) == this.player2.deck.rankOfCardAt(2)) {
       return 'MAD'
     } else if (this.player1.deck.rankOfCardAt(0) == this.player2.deck.rankOfCardAt(0)) {
       return 'war'
@@ -60,6 +62,7 @@ export default class Turn {
   }
 
   awardSpoils(winner) {
+
     this.cardPile.forEach(function(card) {
       winner.deck.addCard(card)
     });
