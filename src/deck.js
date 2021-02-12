@@ -18,7 +18,7 @@ export default class Deck {
   }
 
   percentHighRanking() {
-    let percent = (this.highRankingCards().length / this.cards.length) * 100
+    const percent = (this.highRankingCards().length / this.cards.length) * 100
     return Math.round(percent + Number.EPSILON)
   }
 
