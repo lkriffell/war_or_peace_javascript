@@ -22,12 +22,16 @@ export default class Game {
     while (this.player1.hasLost() == false && this.player2.hasLost() == false && this.turnNum < 1000000) {
       this.turnNum += 1
       let turn = new Turn(this.player1, this.player2)
-      if (turn.turnType() == 'basic') {
-        this.basicTurn(turn)
-      } else if (turn.turnType() == 'war') {
-        this.warTurn(turn)
-      } else if (turn.turnType() == 'MAD') {
-        this.madTurn(turn)
+      switch(turn.turnType()) {
+        case "basic":
+          this.basicTurn(turn)
+        break;
+        case "war":
+          this.warTurn(turn)
+        break;
+        case "MAD":
+          this.madTurn(turn)
+        break;
       }
     }
     this.declareWinner()
