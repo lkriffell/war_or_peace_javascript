@@ -37,7 +37,7 @@ describe('Turn', function() {
       })
 
       it('turnType MAD', function() { 
-        let newCard = new Card('Hearts', '9', 9)
+        const newCard = new Card('Hearts', '9', 9)
         player2.deck.addCard(newCard);
         assert.equal(turn.turnType(), 'MAD')
       })
@@ -96,7 +96,7 @@ describe('Turn', function() {
         turn.player1.deck.cards = [cardOne, cardTwo, cardThree]
         turn.player2.deck.cards = [cardFour, cardFive, cardSix]
         turn.cardPile = []
-        let winner = turn.winner()
+        const winner = turn.winner()
         turn.pileCards()
         turn.awardSpoils(winner)
         assert.equal(player1.deck.cards.length, 4)
