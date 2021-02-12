@@ -8,30 +8,29 @@ export default class Game {
     this.player1 = new Player(name1, this.deckGen.deck1)
     this.player2 = new Player(name2, this.deckGen.deck2)
     this.turnNum = 0
+    this.welcomeMessage()
+    setTimeout(() => this.start(), 7000)
   }
 
   welcomeMessage() {
-    setTimeout(() => console.log("Welcome to War! (or Peace) This game will be played with 52 cards."), 1000)
-    setTimeout(() => console.log(`The players today are ${this.player1.name} and ${this.player2.name}. 1,000,000 turns will result in a draw`), 4000)
-    setTimeout(() => console.log("Okay, let's start!"), 7000)
+    console.log("Welcome to War! (or Peace) This game will be played with 52 cards.")
+    setTimeout(() => console.log(`The players today are ${this.player1.name} and ${this.player2.name}. 1,000,000 turns will result in a draw`), 2000)
+    setTimeout(() => console.log("Okay, let's start!"), 5000)
   }
-
+  
   start() {
-    this.welcomeMessage()
-    setTimeout(() => {
-      while (this.player1.hasLost() == false && this.player2.hasLost() == false && this.turnNum < 1000000) {
-        this.turnNum += 1
-        let turn = new Turn(this.player1, this.player2)
-        if (turn.turnType() == 'basic') {
-          this.basicTurn(turn)
-        } else if (turn.turnType() == 'war') {
-          this.warTurn(turn)
-        } else if (turn.turnType() == 'MAD') {
-          this.madTurn(turn)
-        }
+    while (this.player1.hasLost() == false && this.player2.hasLost() == false && this.turnNum < 1000000) {
+      this.turnNum += 1
+      let turn = new Turn(this.player1, this.player2)
+      if (turn.turnType() == 'basic') {
+        this.basicTurn(turn)
+      } else if (turn.turnType() == 'war') {
+        this.warTurn(turn)
+      } else if (turn.turnType() == 'MAD') {
+        this.madTurn(turn)
       }
-      this.declareWinner()
-    }, 9000);
+    }
+    this.declareWinner()
   }
 
   basicTurn(turn) {
